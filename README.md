@@ -38,7 +38,7 @@
 
 ## 🐍 GitHub Contributions Snake
 <p align="center">
-  <img src="https://raw.githubusercontent.com/moisesxtian/moisesxtian/output/github-contribution-grid-snake.svg" alt="snake gif" />
+  <img src="[https://raw.githubusercontent.com/moisesxtian/moisesxtian/output/github-contribution-grid-snake.svg" alt="snake gif](https://github.com/moisesxtian/moisesxtian/blob/main/snake.yml)" />
 </p>
 
 <p align="center">
