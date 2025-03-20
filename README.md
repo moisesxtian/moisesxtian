@@ -1,5 +1,5 @@
 <!-- Header -->
-<h2 align="center">👋 Hey there! I'm Christian</h2>
+<h1 align="center">👋 Hey there! I'm Christian</h2>
 <p align="center">
   <img src="https://raw.githubusercontent.com/moisesxtian/moisesxtian/output/github-snake-dark.svg" alt="github contribution snake"/>
 </p>
@@ -20,8 +20,8 @@
 
 ## 🚀 Projects
 - 🤟 **ASL Gesture Recognition App** - AI-powered sign language detection (Python + Kotlin + Mediapipe)
-- 🐾 **Tails of Manila Website** - Static website using JavaScript, HTML & CSS
-- 🧠 **Breast Cancer Classifier** - Logistic regression model in Python
+- 🐾 **Conduction Sticker Detection** - Using Python and YOLOV11
+- 🧠 **Customer Service Chatbot representative** - Created a chatbot that answers query, using Langchain,Python,React
 
 ---
 
@@ -40,12 +40,6 @@
     <img alt="Behance" src="https://img.shields.io/badge/Behance-1769FF?style=for-the-badge&logo=behance&logoColor=white" />
   </a>
 </p>
-
----
-
-## 🐍 GitHub Contributions Snake
-
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:9333EA,100:3B82F6&height=120&section=footer"/>
 </p>
