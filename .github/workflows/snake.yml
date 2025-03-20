@@ -23,7 +23,10 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: moisesxtian
-          output_path: ./output/github-contribution-grid-snake.svg  # Ensure this path is correct
+          output_path:
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
 
       # Step 4: List files in the output directory for debugging
       - name: List files in output directory
