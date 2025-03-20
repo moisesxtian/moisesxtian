@@ -16,13 +16,12 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: moisesxtian
-          output_path: ./output/github-contribution-grid-snake.svg
-
-      - name: Ensure output directory exists
-        run: mkdir -p ./output  # Create the output directory if it doesn't exist
+          output_path: ./output/github-contribution-grid-snake.svg  # Ensure this is the correct path
 
       - name: List files in output directory for debugging
-        run: ls -al ./output  # Check the contents of the output directory
+        run: |
+          echo "Listing files in ./output"
+          ls -al ./output  # List files in the output directory to confirm the file is generated
 
       - name: Set up Git
         run: |
