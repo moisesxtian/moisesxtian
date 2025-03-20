@@ -44,7 +44,7 @@ jobs:
       - name: Commit and Push the generated snake svg to the output branch
         run: |
           git checkout -b output  # Make sure you're working with the output branch
-          git add ./output/github-contribution-grid-snake.svg
+          git add ./output/github-snake.svg
           git commit -m "Update snake animation"
           git push --force origin output  # Force push to the output branch
         env:
