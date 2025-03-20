@@ -1,29 +1,33 @@
-name: Push to Output Branch
+name: Generate Snake Animation
 
 on:
-  push:
-    branches:
-      - main  # Trigger the workflow when there's a push to the main branch (or use the branch you're working with)
+  schedule:
+    - cron: "0 0 * * *" # Runs every day at midnight
+  workflow_dispatch:
 
 jobs:
-  push-to-output-branch:
+  generate:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Generate snake animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: moisesxtian
+          output_path: ./output/github-contribution-grid-snake.svg # Correcting the output path
+          
       - name: Set up Git
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Push changes to output branch
+      - name: Commit and Push the generated snake svg to the output branch
         run: |
-          git remote set-url origin https://$GITHUB_TOKEN@github.com/moisesxtian/moisesxtian.git
-          git checkout -b output  # Make sure the output branch exists, create if necessary
-          git add ./output         # Add the changes from the output directory (adjust as needed)
-          git commit -m "Pushed changes to output branch"
+          git checkout -b output  # Make sure you're working with the output branch
+          git add ./output/github-contribution-grid-snake.svg
+          git commit -m "Update snake animation"
           git push --force origin output  # Force push to the output branch
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the token stored in GitHub Secrets
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
