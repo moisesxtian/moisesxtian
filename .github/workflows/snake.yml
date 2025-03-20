@@ -1,44 +1,45 @@
-name: Generate Snake Animation
+name: GitHub Snake Game
 
 on:
+  # Schedule the workflow to run daily at midnight UTC
   schedule:
-    - cron: "0 0 * * *" # Runs every day at midnight
+    - cron: "0 0 * * *"
+
+  # Allow manual triggering of the workflow
   workflow_dispatch:
+
+  # Trigger the workflow on pushes to the main branch
+  push:
+    branches:
+      - main
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      - name: Set up SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-
-      - name: Ensure output directory exists
-        run: mkdir -p ./output
-
-      - name: Generate snake animation
+      # Step 2: Generate the snake animations
+      - name: Generate GitHub Contributions Snake Animations
         uses: Platane/snk@v3
         with:
-          github_user_name: moisesxtian
-          output_path: ./output/github-snake.svg
-
-      - name: Set up Git
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git remote set-url origin git@github.com:moisesxtian/moisesxtian.git  # Set remote to SSH
-
-      - name: Commit and Push the generated snake svg to the output branch
-        run: |
-          git checkout -b output
-          git add ./output/github-snake.svg
-          git commit -m "Update snake animation"
-          git push --force origin output
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Use your secret SSH key
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 3: Deploy the generated files to the 'output' branch
+      - name: Deploy to Output Branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
+          commit_message: "Update snake animation [skip ci]"
