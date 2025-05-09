@@ -13,7 +13,7 @@
 
 ## 🛠️ Tech & Tools
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,kotlin,flutter,html,css,js,figma,photoshop,illustrator,aftereffects,github" />
+  <img src="https://skillicons.dev/icons?i=python,java,kotlin,react,javascript,mongodb,fastapi,flutter,git,flutter,html,css,js,figma,photoshop,illustrator,aftereffects,github" />
 </p>
 
 ---
