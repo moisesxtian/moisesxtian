@@ -41,25 +41,6 @@
 - **AI/ML**: OpenCV, YOLOv8, MediaPipe, LangChain  
 - **Design**: Figma, Adobe Suite (Photoshop, Illustrator, After Effects)  
 - **Other**: REST API, JWT, OAuth2, Vercel, EC2, Jinja2
-
----
-
-## 🌐 Let's Connect
-<p align="center">
-  <a href="https://www.hyxcreation.tech" target="_blank">
-    <img alt="Portfolio" src="https://img.shields.io/badge/🌐-hyxcreation.tech-000?style=for-the-badge" />
-  </a>
-  <a href="https://linkedin.com/in/christian-moises-2767a3345/" target="_blank">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://github.com/moisesxtian" target="_blank">
-    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://www.behance.net/hyxchan" target="_blank">
-    <img alt="Behance" src="https://img.shields.io/badge/Behance-1769FF?style=for-the-badge&logo=behance&logoColor=white" />
-  </a>
-</p>
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:9333EA,100:3B82F6&height=120&section=footer"/>
 </p>
