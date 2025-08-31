@@ -13,7 +13,7 @@
 
 ## 🛠️ Tech & Tools I Use
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,fastapi,react,html,css,js,tailwind,git,github,java,kotlin,mongodb,flutter,figma,photoshop,illustrator,aftereffects" />
+  <img src="https://skillicons.dev/icons?i=python,docker,openai,n8n,langchain,fastapi,react,html,css,js,tailwind,git,github,java,kotlin,mongodb,flutter,figma,photoshop,illustrator,aftereffects" />
 </p>
 
 ---
